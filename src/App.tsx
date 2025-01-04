@@ -5,8 +5,9 @@ function App() {
   const [url, setUrl] = useState<string | null>(null);
 
   const handleQRResult = (result: string) => {
+	console.log(result)
     if (result.startsWith('http')) {
-      setUrl(result.replace(/https?:\/\/(www\.)?(\w+(\.\w+)+)/, ''));
+      setUrl(result.replace(/https?:\/\/(www\.)?(\w+(\.\w+)+)/, 'https://defacto.erkintek.workers.dev'));
     }
   };
 
