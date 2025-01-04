@@ -6,7 +6,7 @@ function App() {
 
   const handleQRResult = (result: string) => {
     if (result.startsWith('http')) {
-      setUrl(result);
+      setUrl(result.replace(/https?:\/\/(www\.)?(\w+(\.\w+)+)/, ''));
     }
   };
 
